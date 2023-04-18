@@ -44,9 +44,9 @@ StartTime =time .time ()#line:58
 CONSOLE_LOGGER_VERBOSE =sb (os .environ .get ("CONSOLE_LOGGER_VERBOSE","False"))#line:61
 ASYNC_POOL =[]#line:63
 if CONSOLE_LOGGER_VERBOSE :#line:65
-  basicConfig (filename ="logfile.txt",level =DEBUG ,format ="[%(asctime)s - %(levelname)s] - @TeloidUserBot : %(message)s",datefmt ='%d-%b-%y %H:%M:%S',filemode ="w")#line:71
+  basicConfig (filename ="logfile.txt",level =DEBUG ,format ="[%(asctime)s - %(levelname)s] - @katanauserbot : %(message)s",datefmt ='%d-%b-%y %H:%M:%S',filemode ="w")#line:71
 else :#line:73
-  basicConfig (filename ="logfile.txt",level =INFO ,format ="[%(asctime)s - %(levelname)s] - @TeloidUserBot : %(message)s",datefmt ='%d-%b-%y %H:%M:%S',filemode ="w",)#line:80
+  basicConfig (filename ="logfile.txt",level =INFO ,format ="[%(asctime)s - %(levelname)s] - @katanauserbot : %(message)s",datefmt ='%d-%b-%y %H:%M:%S',filemode ="w",)#line:80
 LOGS =getLogger (__name__ )#line:82
 if version_info [0 ]<3 or version_info [1 ]<6 :#line:84
   LOGS .info ("En az python 3.6 sürümüne sahip olmanız gerekir." "Birden fazla özellik buna bağlıdır. Bot kapatılıyor.")#line:86
@@ -141,7 +141,7 @@ YOUTUBE_API_KEY =os .environ .get ("YOUTUBE_API_KEY",None )#line:245
 COUNTRY =str (os .environ .get ("COUNTRY",""))#line:248
 TZ_NUMBER =int (os .environ .get ("TZ_NUMBER",1 ))#line:249
 CLEAN_WELCOME =sb (os .environ .get ("CLEAN_WELCOME","True"))#line:252
-BIO_PREFIX =os .environ .get ("BIO_PREFIX","@TeloidUserBot | ")#line:255
+BIO_PREFIX =os .environ .get ("BIO_PREFIX","@katanauserbot | ")#line:255
 LASTFM_API =os .environ .get ("LASTFM_API",None )#line:258
 LASTFM_SECRET =os .environ .get ("LASTFM_SECRET",None )#line:259
 LASTFM_USERNAME =os .environ .get ("LASTFM_USERNAME",None )#line:260
@@ -166,7 +166,7 @@ CMD_HELP_BOT ={}#line:293
 PM_AUTO_BAN_LIMIT =int (os .environ .get ("PM_AUTO_BAN_LIMIT",4 ))#line:295
 SPOTIFY_DC =os .environ .get ("SPOTIFY_DC",None )#line:297
 SPOTIFY_KEY =os .environ .get ("SPOTIFY_KEY",None )#line:298
-PAKET_ISMI =os .environ .get ("PAKET_ISMI","| 🌃 @TeloidUserBot Paketi |")#line:300
+PAKET_ISMI =os .environ .get ("PAKET_ISMI","| 🌃 @katanauserbot Paketi |")#line:300
 BLACKLIST_CHAT =[1615593199 ]#line:304
 OTOMATIK_KATILMA =sb (os .environ .get ("OTOMATIK_KATILMA","True"))#line:307
 AUTO_UPDATE =sb (os .environ .get ("AUTO_UPDATE","True"))#line:308
@@ -303,10 +303,10 @@ def butonlastir (OOOOO00OO0OOO0OO0 ,O00O00O0OO0000O00 ):#line:490
   return [O0OOO000O0OOO000O ,O0000O0OO0OO00O00 ]#line:515
 with bot :#line:518
   try :#line:520
-    bot (JoinChannelRequest ("@TeloidUserBot"))#line:521
-    bot (JoinChannelRequest ("@Robotger"))#line:522
-    bot (JoinChannelRequest ("@Robotgerlinks"))#line:523
-    bot (JoinChannelRequest ("@Robotgersupport"))#line:524
+    bot (JoinChannelRequest ("@katanauserbor"))#line:521
+    bot (JoinChannelRequest ("@legendiletisim"))#line:522
+    bot (JoinChannelRequest ("@katanaprocheck"))#line:523
+    bot (JoinChannelRequest ("@katanaprochat"))#line:524
   except :#line:527
     pass #line:528
   moduller =CMD_HELP #line:530
@@ -325,7 +325,7 @@ with bot :#line:518
     @tgbot .on (NewMessage (pattern ='/start'))#line:546
     async def start_bot_handler (O00O00000O00O0OOO ):#line:547
       if not O00O00000O00O0OOO .message .from_id ==uid :#line:548
-        await O00O00000O00O0OOO .reply (f'`Merhaba ben` @TeloidUserBot`! Ben sahibime (`@{me.username}`) yardımcı olmak için varım, yaani sana yardımcı olamam :/ Ama sen de bir Teloid açabilirsin; Kanala bak` @TeloidUserBot')#line:551
+        await O00O00000O00O0OOO .reply (f'`Merhaba ben` @katanauserbot`! Ben sahibime (`@{me.username}`) yardımcı olmak için varım, yaani sana yardımcı olamam :/ Ama sen de bir Teloid açabilirsin; Kanala bak` @katanaprocheck')#line:551
       else :#line:552
         await O00O00000O00O0OOO .reply (f'`Tengri save Turks! Teloid working... `')#line:553
     @tgbot .on (InlineQuery )#line:555
@@ -333,7 +333,7 @@ with bot :#line:518
       O00OOO0OOOO0O00O0 =OOO0000OO0OOO0OOO .builder #line:557
       OO00OO0O00O0O00O0 =None #line:558
       O0O0OO00OOOOOOO00 =OOO0000OO0OOO0OOO .text #line:559
-      if OOO0000OO0OOO0OOO .query .user_id ==uid and O0O0OO00OOOOOOO00 =="@TeloidUserBot":#line:560
+      if OOO0000OO0OOO0OOO .query .user_id ==uid and O0O0OO00OOOOOOO00 =="@katanauserbot":#line:560
         O000O0OO0O0OO00OO =O0O0OO00OOOOOOO00 [::-1 ]#line:561
         OOO0O00OOOO0000OO =(butonlastir (0 ,sorted (CMD_HELP )))#line:562
         OO00OO0O00O0O00O0 =await O00OOO0OOOO0O00O0 .article (f"Lütfen Sadece .yardım Komutu İle Kullanın",text =f"**En Gelişmiş UserBot!** [Teloid](https://t.me/TeloidUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{OOO0O00OOOO0000OO[0]}",buttons =OOO0O00OOOO0000OO [1 ],link_preview =False )#line:568
@@ -341,20 +341,20 @@ with bot :#line:518
         OO0000000OOO0O00O =O0O0OO00OOOOOOO00 .split (" ")#line:570
         OO00OO0O00O0O00O0 =O00OOO0OOOO0O00O0 .article ("Dosya Yüklendi",text =f"**Dosya başarılı bir şekilde {OO0000000OOO0O00O[2]} sitesine yüklendi!**\n\nYükleme zamanı: {OO0000000OOO0O00O[1][:3]} saniye\n[‏‏‎ ‎]({OO0000000OOO0O00O[0]})",buttons =[[custom .Button .url ('URL',OO0000000OOO0O00O [0 ])]],link_preview =True )#line:576
       else :#line:577
-        OO00OO0O00O0O00O0 =O00OOO0OOOO0O00O0 .article ("@TeloidUserBot",text ="""@TeloidUserBot'u kullanmayı deneyin!
-Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın, siz başkasının botunu yönetemezsiniz! Alttaki GitHub adresinden tüm kurulum detayları anlatılmıştır.""",buttons =[[custom .Button .url ("Kanala Katıl","https://t.me/TeloidUserBot"),custom .Button .url ("Gruba Katıl","https://t.me/RobotgerSupport")],[custom .Button .url ("GitHub","https://github.com/Robotger/TeloidUserBot")]],link_preview =False )#line:590
+        OO00OO0O00O0O00O0 =O00OOO0OOOO0O00O0 .article ("@katanaprocheck",text ="""@katanaprocheck'u kullanmayı deneyin!
+Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın, siz başkasının botunu yönetemezsiniz! Alttaki GitHub adresinden tüm kurulum detayları anlatılmıştır.""",buttons =[[custom .Button .url ("Kanala Katıl","https://t.me/katanaprocheck"),custom .Button .url ("Gruba Katıl","https://t.me/katanaprochat")],[custom .Button .url ("telegram","https://t.me/legendiletisim")]],link_preview =False )#line:590
       await OOO0000OO0OOO0OOO .answer ([OO00OO0O00O0O00O0 ]if OO00OO0O00O0O00O0 else None )#line:591
     @tgbot .on (callbackquery .CallbackQuery (data =compile (b"sayfa\((.+?)\)")))#line:593
     async def sayfa (O00OO00O0O00O00O0 ):#line:594
       if not O00OO00O0O00O00O0 .query .user_id ==uid :#line:595
-        return await O00OO00O0O00O00O0 .answer ("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @TeloidUserBot kur.",cache_time =0 ,alert =True )#line:599
+        return await O00OO00O0O00O00O0 .answer ("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @katanauserbot kur.",cache_time =0 ,alert =True )#line:599
       O0000OO0O0OOO00OO =int (O00OO00O0O00O00O0 .data_match .group (1 ).decode ("UTF-8"))#line:600
       OOOO0O0OO00OOOO00 =butonlastir (O0000OO0O0OOO00OO ,CMD_HELP )#line:601
       await O00OO00O0O00O00O0 .edit (f"** En Gelişmiş UserBot!** [Teloid](https://t.me/TeloidUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** {O0000OO0O0OOO00OO + 1}/{OOOO0O0OO00OOOO00[0]}",buttons =OOOO0O0OO00OOOO00 [1 ],link_preview =False )#line:605
     @tgbot .on (callbackquery .CallbackQuery (data =compile (b"bilgi\[(\d*)\]\((.*)\)")))#line:608
     async def bilgi (OO00OOO0O00O000OO ):#line:609
       if not OO00OOO0O00O000OO .query .user_id ==uid :#line:610
-        return await OO00OOO0O00O000OO .answer ("❌  Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @TeloidUserBot kur.",cache_time =0 ,alert =True )#line:614
+        return await OO00OOO0O00O000OO .answer ("❌  Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @katanauserbot kur.",cache_time =0 ,alert =True )#line:614
       OO0OOO00OOO000OO0 =int (OO00OOO0O00O000OO .data_match .group (1 ).decode ("UTF-8"))#line:616
       OO0OO00O000OOOO0O =OO00OOO0O00O000OO .data_match .group (2 ).decode ("UTF-8")#line:617
       try :#line:618
@@ -367,7 +367,7 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
     @tgbot .on (callbackquery .CallbackQuery (data =compile (b"komut\[(.*)\[(\d*)\]\]\((.*)\)")))#line:639
     async def komut (O00OOOOO0O000000O ):#line:640
       if not O00OOOOO0O000000O .query .user_id ==uid :#line:641
-        return await O00OOOOO0O000000O .answer ("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @TeloidUserBot kur.",cache_time =0 ,alert =True )#line:645
+        return await O00OOOOO0O000000O .answer ("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @katanauserbot kur.",cache_time =0 ,alert =True )#line:645
       OO0O0O00OO0O0000O =O00OOOOO0O000000O .data_match .group (1 ).decode ("UTF-8")#line:647
       O0000OO0000O000OO =int (O00OOOOO0O000000O .data_match .group (2 ).decode ("UTF-8"))#line:648
       OO000000O0O0O000O =O00OOOOO0O000000O .data_match .group (3 ).decode ("UTF-8")#line:649
