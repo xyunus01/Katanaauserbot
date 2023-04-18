@@ -8,12 +8,12 @@ app = Flask(__name__)
 def hello():
  owner_username = os.environ.get("REPL_OWNER")
 
- if owner_username == "ByMisakiMey":
+ if owner_username == "legendiletisim":
   print("Öncelikle Botu forklamalısın.")
   print("First of all You should fork the bot")
   return "Öncelikle Botu forklamalısın.\nFirst of all You should fork the bot"
  else:
-      return "Powered By Ber4tbey"
+      return "Powered By legendiletisim"
  
 @app.route("/log")
 def log():
