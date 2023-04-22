@@ -29,16 +29,16 @@ import userbot.cmdhelp
 import glob
 
 ALIVE_MSG = [
-     "{username}, `Teloid {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{teloid}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
+     "{username}, `Katana {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{katana}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**",
     "`Userbotunuz çalışıyor ve sana bişey demek istiyor.. Seni seviyorum` **{teloidsahip}** ❤️ \n Bot Versiyonu: {teloid} ",
  
-    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{teloidsahip}**, `TeloidUserBot çalışıyor.` \n Bot Versiyonu: {teloid} ",
-    "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{teloidsahip}** \n Bot Versiyonu: {teloid} ",
+    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{katanasahip}**, `KatanaUserBot çalışıyor.` \n Bot Versiyonu: {teloid} ",
+    "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{teloidsahip}** \n Bot Versiyonu: {katana} ",
     "✨ `TeloidUserBot sahibinin emirlerine hazır...` \n Bot Versiyonu: {teloid} ",
     "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{teloidsahip}**. \n Bot Versiyonu: {teloid} ",
     "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme` \n Bot Versiyonu: {teloid} ",
-    "Merhaba {teloidsahip} , Ben senin tarafından seçilmiş, sana durmaksızın hizmet eden bir sekreterim👩🏻‍💻.",
-    "**Hey** {teloidsahip} \n \n✨ __Yüklenen Plugin Sayısı__ ** {plugin} **\n \n👨🏼‍💻 __Python Sürümü__ ** {python} **\n \n⚡️__Telethon Sürüm__ ** {telethon} **\n \n__Botun Sapa Sağlam Çalışıyor iyi günler :)__☄️\n\n\n         __Teloid Sürüm__ ** {teloid} **"
+    "Merhaba {katanasahip} , Ben senin tarafından seçilmiş, sana durmaksızın hizmet eden bir sekreterim👩🏻‍💻.",
+    "**Hey** {katanasahip} \n \n✨ __Yüklenen Plugin Sayısı__ ** {plugin} **\n \n👨🏼‍💻 __Python Sürümü__ ** {python} **\n \n⚡️__Telethon Sürüm__ ** {telethon} **\n \n__Botun Sapa Sağlam Çalışıyor iyi günler :)__☄️\n\n\n         __katana Sürüm__ ** {teloid} **"
 ]
 
 DIZCILIK_STR = [
@@ -95,11 +95,11 @@ KICKME_MSG = [
 ]
 
 CV_MSG = [
-    "**{DEFAULT_NAME}** `Fazla Bi Bilgi Ayarlamamış Ama Şunu Biliyorum Kendisi Baya Zevkli Birisi Çünkü Teloid Userbot Kullanıyor.` 😁",
+    "**{DEFAULT_NAME}** `Fazla Bi Bilgi Ayarlamamış Ama Şunu Biliyorum Kendisi Baya Zevkli Birisi Çünkü Katana Userbot Kullanıyor.` 😁",
     "`Üzgünüm sana vercek bir bilgim yok.`"
 ]
 
-UNAPPROVED_MSG = ("`Hey olduğun yerde kal,!👨‍💻 Ben Teloid. Endişelenme!\n\n`"
+UNAPPROVED_MSG = ("`Hey olduğun yerde kal,!👨‍💻 Ben Katana. Endişelenme!\n\n`"
                   "`Sahibim sana mesaj atma izni vermedi o yüzden sahibim seni onaylayana kadar bu mesajı alacaksın.. `"
                   "`Lütfen sahibimin aktif olmasını bekleyin, o genellikle PM'leri onaylar.\n\n`"
                   "`Bildiğim kadarıyla o kafayı yemiş insanlara PM izni vermiyor.`")
@@ -159,7 +159,7 @@ def extractCommands(file):
                         Komutlar.append(KomutStr)
 
             # lavanPY
-            lavanpy = re.search('\"\"\"TeloidPY(.*)\"\"\"', FileRead, re.DOTALL)
+            lavanpy = re.search('\"\"\"KatanaPY(.*)\"\"\"', FileRead, re.DOTALL)
             if not lavanpy == None:
                 lavanpy = lavanpy.group(0)
                 for Satir in lavanpy.splitlines():
@@ -186,7 +186,7 @@ try:
     idim = bot.get_me().id
     lavanbl = requests.get('https://raw.githubusercontent.com/Robotger/TeloidUbData/master/blacklist.json').json()
     if idim in lavanbl:
-        bot.send_message("me", f"`❌ Teloid yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
+        bot.send_message("me", f"`❌ Katana yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("Teloid yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
         bot.disconnect()
     # ChromeDriver'ı Ayarlayalım #
@@ -292,12 +292,12 @@ if BOT_TOKEN:
 os.system("clear")
 
 LOGS.info("+===========================================================+")
-LOGS.info("|                     ✨Teloid Userbot✨                    |")
+LOGS.info("|                     ✨Katana Userbot✨                    |")
 LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
-          " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/RobotgerSupport")
-LOGS.info(f"Bot versiyonunuz ==> {TELOID_VERSION}")
+          " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/katanaprocheck")
+LOGS.info(f"Bot versiyonunuz ==> {KATANA_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
