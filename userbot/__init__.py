@@ -216,7 +216,7 @@ else :#line:372
     print (teloidver [13 :60 ])#line:373
     exit ()#line:374
 connect ("force-surum.check").close ()#line:379
-DEVS =[5159148002 ]#line:381
+DEVS =[6178309848 ]#line:381
 upVer =[]#line:383
 if os .path .exists ("force-update.check"):#line:384
   os .remove ("force-update.check")#line:385
@@ -248,7 +248,7 @@ import sys #line:425
 if STRING_SESSION :#line:427
   session =StringSession (str (STRING_SESSION ))#line:428
 else :#line:429
-  session ="TeloidUserBot"#line:430
+  session ="katanaprocheck"#line:430
 try :#line:431
   bot =TelegramClient (session =session ,api_id =API_KEY ,api_hash =API_HASH ,connection =ConnectionTcpAbridged ,auto_reconnect =True ,connection_retries =None ,)#line:439
 except Exception as e :#line:441
