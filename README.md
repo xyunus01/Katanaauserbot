@@ -11,7 +11,7 @@
 
 
 ## Bilgilendirme / İnformation 
-***Herhangi bir istek & şikayet & öneriniz varsa [Destek Grubuna](https://t.me/robotgersupport) ulaşabilirsiniz.***
+***Herhangi bir istek & şikayet & öneriniz varsa [Destek Grubuna](https://t.me/katanaprocheck) ulaşabilirsiniz.***
 
 ***You can reach the [Support group](https://t.me/robotgersupport) if there are any requests & complaints & suggestions.***
 ```
