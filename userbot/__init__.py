@@ -93,7 +93,7 @@ if HEROKU_APPNAME is not None and HEROKU_APIKEY is not None :#line:157
     Heroku =heroku3 .from_key (HEROKU_APIKEY )#line:162
     app =Heroku .app (HEROKU_APPNAME )#line:163
     heroku_var =app .config ()#line:164
-    heroku_var ["UPSTREAM_REPO_URL"]="https://github.com/Robotger/TeloidUserBot.git"#line:166
+    heroku_var ["UPSTREAM_REPO_URL"]="https://github.com/xyunus01/TeloidUserBot.git"#line:166
 else :#line:167
   app =None #line:168
 try :#line:170
@@ -325,7 +325,7 @@ with bot :#line:518
     @tgbot .on (NewMessage (pattern ='/start'))#line:546
     async def start_bot_handler (O00O00000O00O0OOO ):#line:547
       if not O00O00000O00O0OOO .message .from_id ==uid :#line:548
-        await O00O00000O00O0OOO .reply (f'`Merhaba ben` @katanauserbot`! Ben sahibime (`@{me.username}`) yardımcı olmak için varım, yaani sana yardımcı olamam :/ Ama sen de bir Teloid açabilirsin; Kanala bak` @katanaprocheck')#line:551
+        await O00O00000O00O0OOO .reply (f'`Merhaba ben` @katanauserbot`! Ben sahibime (`@{me.username}`) yardımcı olmak için varım, yaani sana yardımcı olamam :/ Ama sen de bir katana açabilirsin; Kanala bak` @katanaprocheck')#line:551
       else :#line:552
         await O00O00000O00O0OOO .reply (f'`Tengri save Turks! Teloid working... `')#line:553
     @tgbot .on (InlineQuery )#line:555
@@ -336,7 +336,7 @@ with bot :#line:518
       if OOO0000OO0OOO0OOO .query .user_id ==uid and O0O0OO00OOOOOOO00 =="@katanauserbot":#line:560
         O000O0OO0O0OO00OO =O0O0OO00OOOOOOO00 [::-1 ]#line:561
         OOO0O00OOOO0000OO =(butonlastir (0 ,sorted (CMD_HELP )))#line:562
-        OO00OO0O00O0O00O0 =await O00OOO0OOOO0O00O0 .article (f"Lütfen Sadece .yardım Komutu İle Kullanın",text =f"**En Gelişmiş UserBot!** [Teloid](https://t.me/TeloidUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{OOO0O00OOOO0000OO[0]}",buttons =OOO0O00OOOO0000OO [1 ],link_preview =False )#line:568
+        OO00OO0O00O0O00O0 =await O00OOO0OOOO0O00O0 .article (f"Lütfen Sadece .yardım Komutu İle Kullanın",text =f"**En Gelişmiş UserBot!** [Katana](https://t.me/katanaprocheck) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{OOO0O00OOOO0000OO[0]}",buttons =OOO0O00OOOO0000OO [1 ],link_preview =False )#line:568
       elif O0O0OO00OOOOOOO00 .startswith ("http"):#line:569
         OO0000000OOO0O00O =O0O0OO00OOOOOOO00 .split (" ")#line:570
         OO00OO0O00O0O00O0 =O00OOO0OOOO0O00O0 .article ("Dosya Yüklendi",text =f"**Dosya başarılı bir şekilde {OO0000000OOO0O00O[2]} sitesine yüklendi!**\n\nYükleme zamanı: {OO0000000OOO0O00O[1][:3]} saniye\n[‏‏‎ ‎]({OO0000000OOO0O00O[0]})",buttons =[[custom .Button .url ('URL',OO0000000OOO0O00O [0 ])]],link_preview =True )#line:576
